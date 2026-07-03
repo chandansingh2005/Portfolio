@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+:root{
+  --ink: #0E1520;
+  --ink-2: #131B29;
+  --ink-3: #1B2333;
+  --paper: #F5F2EA;
+  --paper-2: #ECE7DA;
+  --line-dark: #26304200;
+  --line: rgba(255,255,255,0.09);
+  --line-paper: rgba(23,27,34,0.12);
+  --signal: #E39B3C;
+  --signal-2: #C77F26;
+  --text-hi: #F3F1E9;
+  --text-lo: #93A0B4;
+  --text-lo-2: #6D7A8E;
+  --text-ink: #171B22;
+  --text-ink-muted: #565F6E;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family: 'IBM Plex Sans', system-ui, sans-serif;
+  background-color: var(--ink);
+}
+
+.font-display{
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+}
+
+.font-mono{
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+}
+
+::selection{
+  background: var(--signal);
+  color: var(--ink);
+}
+
+/* thin scrollbar accent */
+::-webkit-scrollbar{ width: 10px; }
+::-webkit-scrollbar-track{ background: var(--ink); }
+::-webkit-scrollbar-thumb{ background: var(--ink-3); border-radius: 8px; }
+
+@media (prefers-reduced-motion: reduce){
+  *{ animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+}
